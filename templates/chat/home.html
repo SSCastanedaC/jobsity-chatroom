@@ -1,0 +1,22 @@
+<!-- chat/templates/chat/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Rooms</title>
+</head>
+<body>
+    Selecciona una sala<br/>
+        
+    {% for sala in salas %}
+    <a href="{% url 'chat:room' sala.nombre %}">
+        {{sala.nombre}}
+    </a>
+    <br>
+    {% endfor %}
+    <br><br>
+    <a href="{% url 'logout' %}">Cerrar Sesión</a>
+
+    
+</body>
+</html>
